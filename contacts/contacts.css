@@ -19,38 +19,7 @@ body {
   display: none;
 }
 
-@media (max-width: 768px) {
-  body {
-    max-width: 100vh;
-    overflow-x: hidden;
-  }
-  .navigation a {
-    display: none;
-  }
-  .getPrice {
-    display: none;
-  }
-  .menu {
-    display: block;
-    overflow: hidden;
-  }
-  .hero-2 {
-    flex-direction: column;
-    width: 100%;
-    min-height: 90vh;
-  }
-  .hero2-1 {
-    width: 800px;
-    height: 500px;
-    background-color: green;
-  }
-  .hero2-2 {
-    width: 100%;
-    height: 500px;
-    order: 1;
-    background-color: yellow;
-  }
-}
+
 .logoHolder {
   height: 100px;
   width: 100px;
