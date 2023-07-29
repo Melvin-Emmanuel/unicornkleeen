@@ -73,5 +73,17 @@ document.getElementById("bookNow").addEventListener("click", (event) => {
   });
   localStorage.setItem("userDetails", JSON.stringify(getValue));
   console.log(bedValue2);
+
+
+   number = document.getElementById("num").value=''
+    email = document.getElementById("mail").value=''
+   address = document.getElementById("address").value=''
+    name = document.getElementById("nam").value=''
+   bedValue1 = parseInt(document.getElementById("bedSize1").innerHTML=0)
+   bedValue2 = parseInt(document.getElementById("bedSize2").innerHTML=0)
+//  location.reload()
   return false;
+
 });
+
+

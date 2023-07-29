@@ -9,7 +9,7 @@ const objectArray = [
         name: 'kode10x'
     },
 ];
-localStorage.setItem("appointmentInfo", JSON.stringify(objectArray));
+// localStorage.setItem("appointmentInfo", JSON.stringify(objectArray));
 console.log(objectArray)
 const getFromLocal=()=>{
     let newArray =[]
@@ -19,17 +19,24 @@ const getFromLocal=()=>{
 
 document.getElementById('submit').addEventListener('click', (e) => {
     e.preventDefault()
-    // let userMessage=document.getElementById('message').value
+   
     let userNumber=document.getElementById('number').value
-    let userLocation=document.getElementById('location').value
-    let userDate=document.getElementById('date').value=new Date()
+    let userLocation=document.getElementById('location').innerHTML
+    let userDate=document.getElementById('date').value
     let userService=document.getElementById('service').value
     let userEmail=document.getElementById('email').value
     let userName = document.getElementById('name').value
     let getValue = getFromLocal() 
-    getValue.push({ name: userName, email: userEmail, service: userService, date: userDate, location: userLocation, number: userNumber, message: userMessage })
+    getValue.push({ name: userName, number: userNumber,email: userEmail, service: userService, date: userDate, location: userLocation })
     localStorage.setItem("appointmentInfo", JSON.stringify(getValue));
-    console.log(userDate,userEmail,userLocation,userName,userNumber,userService)
+  console.log(userDate, userEmail, userLocation, userName, userNumber, userService)
+  console.log('clicked')
+ userNumber = document.getElementById("number").value=''
+ userLocation = document.getElementById("location").value=''
+  userDate = document.getElementById("date").value=''
+  userService = document.getElementById("service").value=''
+ userEmail = document.getElementById("email").value=''
+ userName = document.getElementById("name").value=''
     return false
     
     
@@ -41,5 +48,5 @@ const checklogin = () => {
     location.href = "../signup/signup.html";
   }
 };
-checklogin();
+// checklogin();
 
