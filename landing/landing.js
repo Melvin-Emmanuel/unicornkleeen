@@ -42,11 +42,14 @@ document.getElementById('submit').addEventListener('click', (e) => {
     
 })
 const checklogin = () => {
-  let email = localStorage.getItem("email");
-  let password = localStorage.getItem("password");
-  if (!email && !password) {
-    location.href = "../signup/signup.html";
+  let email = localStorage.getItem("User Name");
+  let password = localStorage.getItem("Pass");
+  if (email && password) {
+    document.getElementById('signin').style.display = 'none'
+    document.getElementById('register').innerHTML=(`WELCOME, ${localStorage.getItem('User Name').toLocaleUpperCase()}`)
+    
   }
 };
-// checklogin();
+checklogin();
+
 

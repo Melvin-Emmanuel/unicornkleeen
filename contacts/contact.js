@@ -85,5 +85,3 @@ document.getElementById("bookNow").addEventListener("click", (event) => {
   return false;
 
 });
-
-
